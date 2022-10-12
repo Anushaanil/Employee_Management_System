@@ -1,4 +1,15 @@
 # Steps followed so far in building Django application
 
 1. Create virtual environment using command: python -m venv virtual
-2. 
+2. Install djano using pip command from virtual environment
+3. use command django-admin startproject <projectname> . to create the project
+4. use command python manage.py startapp <appname> to create the app 
+5. Add the app name in the settings.py file of project
+6. Include the urls of app in the urls.py file of project
+7. Inside the app create a file called urls.py and add the urls of functions in views file
+8. In the views file, add the function mentioned in url with the code if any else render the template
+9. add templates folder in app and add the respective html file in it 
+10. Add the respective models in models.py file 
+11. Run the command python manage.py makemigrations and python manage.py migrate to store the changes made
+12. register the models in admin.py file
+13. Create the superuser using the command python manage.py createsuperuser
