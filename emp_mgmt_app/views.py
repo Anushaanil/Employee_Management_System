@@ -4,6 +4,8 @@ from django.db import models
 from . add_emp_form import EmployeeForm
 from django.http import HttpResponseRedirect
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
 def index(request):
@@ -85,3 +87,7 @@ def filter_emp(request):
         return render(request,'filter_emp.html')
     else:
         return HttpResponse('exception occured!')
+
+@login_required(login_url='/admin')
+def update_emp(request):
+    return render(request, 'update_emp.html',{})
